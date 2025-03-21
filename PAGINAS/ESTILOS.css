@@ -1,0 +1,164 @@
+@page {
+    margin: 0;
+}
+
+@media print {
+    /* Oculta todo el resto */
+    body * {
+      visibility: hidden;
+    }
+    /* Muestra solo el área a imprimir */
+    #printArea,
+    #printArea * {
+      visibility: visible;
+    }
+    /* Elimina márgenes y posiciona el área de impresión en la parte superior izquierda */
+    #printArea {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    /* Ajusta la tabla para que ocupe todo el ancho */
+    #selected-items-list {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    #selected-items-list th,
+    #selected-items-list td {
+      border: 1px solid #000;
+      padding: 5px;
+    }
+  }
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+    gap: 20px;
+}
+.menu-container {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.menu {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.categoria {
+    flex: 1 1 calc(33.33% - 30px);
+    margin-bottom: 40px;
+    min-width: 300px;
+}
+.categoria-title {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+.menu-item {
+    background-color: #ffcc00;
+    padding: 20px;
+    font-size: 16px;
+    color: #333;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+.menu-item:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
+}
+.selected-items-panel {
+    flex: 0 0 40%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 80vh; /* Ajusta para que solo ocupe el espacio necesario */
+    overflow-y: auto;
+    page-break-before: always; /* Si se imprime más de una página, se hará un corte de página adecuado */
+}
+.selected-items-panel h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    page-break-inside: auto; /* Evita cortes innecesarios dentro de la tabla */
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.total {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 14pt;
+}
+.action-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#send-order {
+    background-color: #007bff;
+    color: white;
+}
+#print-receipt {
+    background-color: #28a745;
+    color: white;
+}
+#back-to-panel {
+    background-color: #f0ad4e;
+    color: white;
+    margin-top: 15px;
+}
+#back-to-panel:hover {
+    background-color: #ec971f;
+}
+#descripcion-btn {
+    background-color: #608a84; 
+    color: white;
+}
+
+#descripcion-btn:hover {
+    background-color: #57b300; 
+}
+
