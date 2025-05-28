@@ -1,5 +1,5 @@
-🐔 Sistema de Gestión de Pedidos para Pollería
-Sistema desarrollado para gestionar pedidos de forma eficiente en una pollería, permitiendo enviar pedidos, imprimir precuentas, anular productos y añadir descripciones personalizadas a los pedidos. Optimizado para uso rápido y práctico en entornos de atención al cliente.
+🐔 Sistema Control de ventas para Pollería
+Sistema desarrollado para gestionar pedidos de forma eficiente en una pollería, permitiendo enviar pedidos, imprimir precuentas, anular productos y añadir descripciones personalizadas a los pedidos. Optimizado para uso rápido y práctico en entornos de atención al cliente, generando reporte y mayor control al dueño.
 
 🚀 Tecnologías Utilizadas
 PHP
@@ -16,7 +16,6 @@ MySQL
 
 
 📂 Instalación
-Clona el repositorio
-Configura la base de datos en config.php
-Ejecuta en servidor local (XAMPP o similar)
+Clona el repositorio 
+Ejecuta en servidor local (XAMPP)
 ¡Listo para usar!
